@@ -1,0 +1,5 @@
+.env/
+Anaconda Prompt (miniconda3).lnk
+data/
+.ipynb_checkpoints/
+__pycache__/
