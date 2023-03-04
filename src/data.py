@@ -5,6 +5,14 @@ import os
 
 def fetch_data(folder="data", zip_file="file.zip", remove_zip=True, overwrite=False):
     if not overwrite:
+        if _check_existing_data(folder):
+            return None
+
+    download_data(folder, zip_file)
+    unzip_data(folder, zip_file, remove_zip)
+
+def _check_existing_data(folder):
+    if os.path.exists(folder) and os.path.isdir(folder):
         #Check if resulting folders already exists, skip fetching if does
         directories = [d for d in os.listdir(folder) if os.path.isdir(os.path.join(folder, d))]
         has_annotations = False
@@ -18,11 +26,11 @@ def fetch_data(folder="data", zip_file="file.zip", remove_zip=True, overwrite=Fa
         if has_annotations and has_images:
             print("Folder already has folders 'annotations' and 'images'.")
             print("Assuming you already have the data and skipping fetch.")
-            return None
-
-    
-    download_data(folder, zip_file)
-    unzip_data(folder, zip_file, remove_zip)
+            return True
+        else:
+            return False
+    else:
+        return False
 
 
 def download_data(folder="data", zip_file="file.zip"):
