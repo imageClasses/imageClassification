@@ -1,4 +1,4 @@
-"Some functions to handle data operations"
+"Some functions to handle data downloading"
 from urllib import request
 import zipfile
 import os
