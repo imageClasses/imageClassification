@@ -14,3 +14,11 @@
 
 ### saved_models:
 - Saved models with best results and metadata from training sessions
+
+## Get Started:
+- The code can be run with Conda environment with these libraries:
+    - Pytorch
+    - Pandas
+    - Numpy
+    - Matplotlib
+- Alternatively "environment.yml" contains full library list to use with the project
