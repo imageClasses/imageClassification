@@ -3,4 +3,4 @@ Anaconda Prompt (miniconda3).lnk
 data/
 .ipynb_checkpoints/
 __pycache__/
-best_model_state.pt
+temp_best_model_state.pt
