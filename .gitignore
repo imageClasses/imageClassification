@@ -4,3 +4,4 @@ data/
 .ipynb_checkpoints/
 __pycache__/
 temp_best_model_state.pt
+results.csv
